@@ -1,0 +1,31 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: black;
+	overflow: hidden;
+}
+#send {
+	padding: 25%;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+#msgs {
+	background: black;
+	color: white;
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+#msgs p {
+	padding: 10px;
+}
+#list {
+	padding: 10px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	max-height: 70%;
+}
