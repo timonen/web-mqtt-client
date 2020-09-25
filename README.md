@@ -1,2 +1,2 @@
 # php-mqtt-client
-this simple web interface uses mqtt trough mosquitto
+this is very simple web interface that uses mqtt protocol trough mosquitto
