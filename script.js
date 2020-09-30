@@ -21,20 +21,19 @@ ajax_read = (t, url, f) => {
 },
 lupdate = () => {
 	ajax_read('get', "./read.php", (x)=>{
-		var splt = x.split('aihe\ ');
 		list.innerHTML = "";
-				for (var i = 1; i < splt.length; i++) {
-						list.innerHTML += '<br>> '+splt[i];
-				}
-		});
+		list.innerHTML += x;
+	});
 };
 
-var val = document.getElementById('msgVal'),
+var val = document.getElementById('msgVal'), 
 	btn = document.getElementById('msgSend'),
-	list = document.getElementById('list');
+	topic = document.getElementById('msgTopic'),
+	list = document.getElementById('list'),
+	topic = topic.value;
 
 btn.addEventListener("click", ()=>{
-	ajax_send('get', "./send.php?msg", val.value);
+	ajax_send('get', `./send.php?topic=${topic}&msg=${val.value}`);
 	val.value = "";
 });
 
